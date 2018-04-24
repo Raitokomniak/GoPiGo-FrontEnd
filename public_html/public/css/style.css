@@ -1,0 +1,183 @@
+
+/***************************************************/
+/*FONTS*/
+/***************************************************/
+@font-face {
+    font-family: BasicFont;
+    src: url(media/AmaticSC-Regular.ttf);
+}
+
+.Links a {
+    font-size: 36px;
+    color: #f4f2f3 !important;
+    font-family: TitleFont;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #f3f3f3;
+}
+
+.header h1 {
+    font-size: 70px;
+    color: #FFF;
+}
+
+/***************************************************/
+/*MAIN BLOCKS*/
+/***************************************************/
+
+body {
+    background: #000000;
+}
+
+.container{
+    width:100%;
+}
+
+.content {
+    max-width:100%;
+    max-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: fixed;
+}
+
+.contentText {
+    text-align: justify;
+    font-size: 15px;
+}
+
+#stream{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+
+#navigation{
+    bottom: 0;
+    position: fixed;
+}
+
+#dataview {
+    bottom: 0px;
+    right: 0px;
+    position: fixed;
+    width: 600px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    padding:10px;
+}
+
+#datatable {
+    width: 100%;
+}
+
+#footer {
+    font-size: 15px;
+    padding-left: 10px;
+    font-weight: bold;
+    bottom: 0;
+    position: fixed;
+    background: rgba(255, 255, 255, 0.5);
+    height: 40px;
+    padding: 10px;
+}
+
+/***************************************************/
+/*BUTTONS*/
+/***************************************************/
+
+
+#drivebuttons {
+    left: 100px;
+    top: 200px;
+    position: fixed;
+}
+
+.driveButton {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+#drivebutton-up{
+    position: relative;
+
+    top: 50px;
+}
+
+#drivebutton-down{
+    position: relative;
+    bottom: 50px;
+}
+
+#drivebutton-left{
+    position: relative;
+    right: 70px;
+    top: 50px;
+}
+
+#drivebutton-right{
+    position: relative;
+    left: 70px;
+    bottom: 50px;
+}
+
+.btn {
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  
+  background: #3498db;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:active {
+
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  
+  font-family: Arial;
+  font-size: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  
+  background: rgba(52, 152, 219, 0.5);
+  padding: 10px 20px 10px 20px;
+}
+
+.drivebutton-fakepressed{
+     -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  
+  font-family: Arial;
+  font-size: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  
+  background: rgba(52, 152, 219, 0.5);
+  padding: 10px 20px 10px 20px;
+}
+
+#turnbuttons {
+    right: 200px;
+    top: 300px;
+    position: fixed;
+}
+
+#servobutton-left{}
+#servobutton-right{}
+
+
+
+

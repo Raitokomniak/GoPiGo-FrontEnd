@@ -1,0 +1,43 @@
+doctype html
+html(lang='en', ng-app='gopigo')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title GoPiGo
+    // Style
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/style.css')
+    // Libraries
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-resource.js')
+
+    // Controllers
+    script(src='/js/mainmodule.js')
+    script(src='/js/maincontroller.js')
+    script(src='/js/CarController.js')
+    script(src='/js/DataController.js')
+  body(ng-app='gopigo')
+    .container
+      .streammodule
+        img#stream(src='http://dex.local:8080/stream/video.mjpeg')
+
+      .content
+        .row
+          .col-md-12(ng-controller='CarController')
+            #drivebuttons
+              #drivebutton-up
+                button#driveButton0.btn.driveButton(type='button', ng-mousedown='onDriveButtonClick(0)') Forward      
+              #drivebutton-left
+                button#driveButton1.btn.driveButton(type='button', ng-mousedown='onDriveButtonClick(1)') Left    
+              #drivebutton-right
+                button#driveButton2.btn.driveButton(type='button', ng-mousedown='onDriveButtonClick(2)') Right   
+              #drivebutton-down
+                button#driveButton3.btn.driveButton(type='button', ng-mousedown='onDriveButtonClick(3)') Back    
+
+            #dataview.well
+              include DataPage.pug  
+
+            #footer.well
+              | © Whatever Team 2018
