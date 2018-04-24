@@ -1,8 +1,7 @@
 /* 
  * DataController
  *
- * This controller fetches data from the server via a HTTP request 
- * and stores it so it can be displayed on DataPage.html.
+ * This controller fetches data from the server
  */
 
 module.controller('DataController', ['$scope', '$http', function ($scope, $http) {

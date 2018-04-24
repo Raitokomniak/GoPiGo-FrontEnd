@@ -1,11 +1,7 @@
 /*
  * CarController
  
- * This controller detects button input or keyboard input and
- * pushes the drive direction data to the GoPiGo car
- 
- * Vertical directions push data to car motors and horizontal directions
- * push data to wheel rotation
+ * This controller detects button input or keyboard input
  * 
  */
 
