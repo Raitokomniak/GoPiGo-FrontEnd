@@ -128,7 +128,7 @@ module.controller('CarController', ['$scope', '$http', function ($scope, $http) 
         };
 
         $scope.sendData = function (dir, driveDir) {
-            console.log("Sending: Drive " + driveDir);  //INSERT HERE THE DATA PUSH TO GOPIGO (python file in folder?)
+            //console.log("Sending: Drive " + driveDir);  //INSERT HERE THE DATA PUSH TO GOPIGO (python file in folder?)
         }
 
         $scope.stopSending = function (dir) {
