@@ -11,9 +11,13 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
+<<<<<<< HEAD
     "nodemon": "^1.17.3"
   },
   "devDependencies": {
+=======
+    "jade": "^1.11.0",
+>>>>>>> 9e9e8aaf211854f929658460286c2bc541059f88
     "pug": "^2.0.3",
     "socket.io": "^2.1.0"
   }
