@@ -7,7 +7,7 @@
 
 
 module.controller('CarController', ['$scope', '$http', function ($scope, $http) {
-    var socket = io.connect('http://ef59ed62.ngrok.io');
+    var socket = io.connect('http://ef59ed62.ngrok.io'); // change to whatever ngrok address
     socket.on('connect', function (data) {
         socket.emit('join', 'client message to server // carController.js');
     });
