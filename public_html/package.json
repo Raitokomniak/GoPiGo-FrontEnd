@@ -8,5 +8,13 @@
     "start": "node server.js"
   },
   "author": "Raitowaifu",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "nodemon": "^1.17.3"
+  },
+  "devDependencies": {
+    "pug": "^2.0.3",
+    "socket.io": "^2.1.0"
+  }
 }
