@@ -5,7 +5,7 @@ var io = require('socket.io')(server);
 
 
 // GoPiGo libs
-var Gopigo = require('node-gopigo').Gopigo;
+/*var Gopigo = require('node-gopigo').Gopigo;
 var Commands = Gopigo.commands;
 var Robot = Gopigo.robot;
 
@@ -14,6 +14,13 @@ var robot = new Robot({
   criticalVoltage: 1.2,
   debug: true,
   ultrasonicSensorPin: 15
+});*/
+
+app.set('view engine', 'pug')
+
+app.get('/', function(req, res){
+ // res.sendFile(__dirname + '/index.html');
+  res.render('index');
 });
 
 io.on('connection', function (client) {
