@@ -12,7 +12,7 @@ html(lang='en', ng-app='gopigo')
     script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js')
     script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js')
     script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-resource.js')
-    script(src='/socket.io/socket.io.js')
+    script(src='http://www.students.oamk.fi/~t2kaja04/GoPiGo/js/script.js')
 
     // Controllers
     script(src='/js/mainmodule.js')
@@ -23,20 +23,20 @@ html(lang='en', ng-app='gopigo')
   body(ng-app='gopigo')
     .container
       .streammodule
-        img#stream(src='http://dex.local:8080/stream/video.mjpeg')
+        img#stream(src='http://7b8568f9.ngrok.io/stream/video.mjpeg')
 
       .content
         .row
           .col-md-12(ng-controller='CarController')
             #drivebuttons
               #drivebutton-up
-                button#driveButton0.btn.driveButton(type='button', ng-mousedown='onDriveButtonClick(0)') Forward      
+                button#driveButton0.btn.driveButton(type='button', ng-mousedown='onDriveButtonClick(0)', onmousedown="button('Forward')", onmouseup="button('Stop')") Forward      
               #drivebutton-left
-                button#driveButton1.btn.driveButton(type='button', ng-mousedown='onDriveButtonClick(1)') Left    
+                button#driveButton1.btn.driveButton(type='button', ng-mousedown='onDriveButtonClick(1)', onmousedown="button('Left')", onmouseup="button('Stop')") Left    
               #drivebutton-right
-                button#driveButton2.btn.driveButton(type='button', ng-mousedown='onDriveButtonClick(2)') Right   
+                button#driveButton2.btn.driveButton(type='button', ng-mousedown='onDriveButtonClick(2)', onmousedown="button('Right')", onmouseup="button('Stop')") Right   
               #drivebutton-down
-                button#driveButton3.btn.driveButton(type='button', ng-mousedown='onDriveButtonClick(3)') Back    
+                button#driveButton3.btn.driveButton(type='button', ng-mousedown='onDriveButtonClick(3)', onmousedown="button('Reverse')", onmouseup="button('Stop')") Back    
 
             #dataview.well
               include DataPage.pug  
