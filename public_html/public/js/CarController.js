@@ -88,7 +88,6 @@ module.controller('CarController', ['$scope', '$http', function ($scope, $http) 
             if (!$scope.driveKeysDown[0])
                 $scope.canPressKey = true;
         }
-<<<<<<< HEAD
         return $scope.canPressKey;
     }
 
@@ -109,33 +108,6 @@ module.controller('CarController', ['$scope', '$http', function ($scope, $http) 
         } else {
             if (button !== "")
                 button.removeClass('drivebutton-fakepressed');
-=======
-
-        ////////////////////////////////////////////
-        // DATA SENDER
-        ////////////////////////////////////////////
-
-        $scope.drive = function (dir) {
-             var driveDir = "";  // for debugging
-
-            if (dir === 0)
-                driveDir = "Up";
-            if (dir === 1)
-                driveDir = "Left";
-            if (dir === 2)
-                driveDir = "Right";
-            if (dir === 3)
-                driveDir = "Down";
-
-            
-            $scope.senders[dir] = setInterval(function () {
-                $scope.sendData(dir, driveDir);
-            }, $scope.sendingInterval);
-        };
-
-        $scope.sendData = function (dir, driveDir) {
-            //console.log("Sending: Drive " + driveDir);  //INSERT HERE THE DATA PUSH TO GOPIGO (python file in folder?)
->>>>>>> 9e9e8aaf211854f929658460286c2bc541059f88
         }
     }
 
