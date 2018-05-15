@@ -5,69 +5,25 @@
  */
 
 module.controller('DataController', ['$scope', '$http', function ($scope, $http) {
+        $scope.pollingInterval = 1000; // in milliseconds (100 is default)
 
-        $scope.GPSLabel ="GPS";
-        $scope.GPSData = "41°24’12.2″N   2°10’26.5″E";
+        $scope.GPSLabel = "GPS";
+        $scope.GPSData = "";
 
         $scope.TemperatureLabel = "Temperature";
-        $scope.TemperatureData = "15";
-        
+        $scope.TemperatureData = "";
+
         $scope.LightLabel = "Light";
-        $scope.LightData = "60";
-        
-        
-        
-        
-        $scope.testGet = function () {
-            var xmlhttp = new XMLHttpRequest();
+        $scope.LightData = "";
 
-            //endpoint url
-            var url = "/testGet";
-
-            //SEND REQUEST
-            //echo response if successful
-            xmlhttp.onreadystatechange = function () {
-                                            //if readystates required
-                if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-                    document.getElementById('responseMessage').innerHTML = xmlhttp.responseText;
-                }
-            };
-            xmlhttp.open("GET", url, true); 
-            xmlhttp.send();
+        window.onload = function () {
+            console.log("onload")
+             $scope.getData();
         }
-        
-        
-        
-        
-        
-        
-        $scope.testPush = function () {
-            var xmlhttp = new XMLHttpRequest();
-            //endpoint url
-            url = "/testPush";
 
-            //sent data (car command)
-            var driveData = {
-                data: {
-                    dir: 1
-                }
-            };
-            console.log(JSON.stringify( driveData ));
-
-            //SEND REQUEST
-            //echo response if successful
-            xmlhttp.onreadystatechange = function () {
-                            //if readystates required
-                if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-                    document.getElementById('responseMessage').innerHTML = xmlhttp.responseText;
-                }
-            };
+        $scope.getData = function () {
             
-            xmlhttp.open("POST", url, true);
-            xmlhttp.send(JSON.stringify(driveData));
         }
-
-       
 
     }]);
 

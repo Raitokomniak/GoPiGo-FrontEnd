@@ -5,12 +5,7 @@
  * 
  */
 
-
 module.controller('CarController', ['$scope', '$http', function ($scope, $http) {
-        var socket = io.connect('http://ef59ed62.ngrok.io'); // change to whatever ngrok address
-        socket.on('connect', function (data) {
-            socket.emit('join', 'client message to server // carController.js');
-        });
 
         $scope.driveKeysDown = [false, false, false, false];
         $scope.senders = [1];
@@ -179,10 +174,10 @@ module.controller('CarController', ['$scope', '$http', function ($scope, $http) 
 
 
         $scope.sendData = function (dir, driveDir) {
-            console.log("Sending: Drive " + driveDir);  //INSERT HERE THE DATA PUSH TO GOPIGO (python file in folder?)
+            console.log("Sending: Drive " + driveDir);
 
             var command = "command=" + driveDir;
-            console.log(command);
+            //console.log(command);
 
             var sqlReq = new XMLHttpRequest();
             sqlReq.open("POST", "http://www.students.oamk.fi/~t2kaja04/GoPiGo/php/movement.php", true);
@@ -197,8 +192,8 @@ module.controller('CarController', ['$scope', '$http', function ($scope, $http) 
             sqlReq.send(command);
         }
 
-        /*
-         $scope.createCORSRequest(method, url){
+        
+         $scope.createCORSRequest = function(method, url){
          var xhr = new XMLHttpRequest();
          if("withCredentials" in xhr){
          xhr.open(method, url);
@@ -212,7 +207,7 @@ module.controller('CarController', ['$scope', '$http', function ($scope, $http) 
          }
          return xhr;
          
-         }*/
+         }
 
         $scope.stopSending = function (dir) {
             $scope.sendData(-1, "Stop");
